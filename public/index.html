@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+    <title>Pictionary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<!-- JS -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Pictionary</a>
+            <a class="navbar-brand" href="#">Welcome <span id="name"></span> !</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/golgistudio/thinkful-pictionary" target="_blank">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="col-sm-4 col-md-3 sidebar">
+        <div class="row row-sp">
+            <div>
+                <span id="drawer"></span> is drawing
+            </div>
+        </div>
+        <div class="row row-sp">
+            <div class="input-group input-group-md">
+                <input type="text" id='message-input' class="form-control" placeholder="Enter your guess"
+                       aria-describedby="sizing-addon1">
+            </div>
+        </div>
+        <hr>
+        <div class="row ">
+            <div id="messages">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div id="userList">
+                Users Online (0):
+            </div>
+        </div>
+        <div class="row">
+            <div id="usernames">
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div id="notifications">
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div id="updates">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-3 main">
+        <div class="row row-sp">
+            <div class="col-sm-4 col-md-2">
+                  <h3><span class="label label-default" id="current-word">House</span></h3>
+            </div>
+            <div class="col-sm-8 col-md-10">
+            <div class="btn-toolbar">
+            <button type="button" class="btn  btn-primary pull-right col-xs-2" id="draw-button">Draw</button>
+            <button type="button" class="btn  btn-primary pull-right col-xs-2" id="new-game">New Game</button>
+            <button type="button" class="btn  btn-primary pull-right col-xs-2" id="new-word">New Word</button>
+            </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
