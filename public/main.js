@@ -229,6 +229,7 @@ var socketManager = function(socket, drawingManager) {
         $('#draw-button').removeClass('active')
         $('#drawer').empty();
         $('#drawer').append(data.drawer);
+        $('#current-word').empty();
         drawingManager.clearDrawing()
     }.bind(this))
 
